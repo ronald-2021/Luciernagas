@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>✨ Luciérnagas - Iluminando el Futuro</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;900&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --primary: #FFD700;
@@ -105,7 +108,7 @@
             position: relative;
             overflow: hidden;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4),
-                        inset 0 -3px 0 var(--primary);
+                inset 0 -3px 0 var(--primary);
             animation: slideDown 1s ease-out;
         }
 
@@ -114,6 +117,7 @@
                 opacity: 0;
                 transform: translateY(-100px) scale(0.9);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0) scale(1);
@@ -132,9 +136,19 @@
         }
 
         @keyframes gradientShift {
-            0%, 100% { background: var(--gradient-1); }
-            33% { background: var(--gradient-2); }
-            66% { background: var(--gradient-3); }
+
+            0%,
+            100% {
+                background: var(--gradient-1);
+            }
+
+            33% {
+                background: var(--gradient-2);
+            }
+
+            66% {
+                background: var(--gradient-3);
+            }
         }
 
         h1 {
@@ -154,8 +168,15 @@
         }
 
         @keyframes textGlow {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
         }
 
         .subtitle {
@@ -193,8 +214,13 @@
         }
 
         @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
         }
 
         @keyframes fadeInUp {
@@ -202,6 +228,7 @@
                 opacity: 0;
                 transform: translateY(50px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -401,7 +428,7 @@
         .person-card:hover {
             transform: translateY(-15px) rotateX(5deg) rotateY(5deg);
             box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5),
-                        0 0 50px var(--glow-primary);
+                0 0 50px var(--glow-primary);
         }
 
         .person-avatar {
@@ -419,8 +446,15 @@
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
         }
 
         .person-name {
@@ -574,16 +608,37 @@
         }
 
         @media (max-width: 768px) {
-            h1 { font-size: 3rem; }
-            .section-title { font-size: 1.8rem; }
-            .person-grid { grid-template-columns: 1fr; }
-            .stats-container { grid-template-columns: 1fr; }
-            .theme-toggle { top: 15px; right: 15px; padding: 10px 15px; }
+            h1 {
+                font-size: 3rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .person-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-container {
+                grid-template-columns: 1fr;
+            }
+
+            .theme-toggle {
+                top: 15px;
+                right: 15px;
+                padding: 10px 15px;
+            }
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
 
         /* Scroll Indicator */
@@ -597,8 +652,15 @@
         }
 
         @keyframes bounce {
-            0%, 100% { transform: translateX(-50%) translateY(0); }
-            50% { transform: translateX(-50%) translateY(-20px); }
+
+            0%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+
+            50% {
+                transform: translateX(-50%) translateY(-20px);
+            }
         }
 
         .scroll-arrow {
@@ -608,6 +670,7 @@
         }
     </style>
 </head>
+
 <body>
     <canvas id="particle-canvas"></canvas>
 
@@ -627,9 +690,11 @@
         <section class="glass-card" style="animation-delay: 0.2s;">
             <h2 class="section-title">🎯 Misión Transformadora</h2>
             <p class="mission-text">
-                Somos <span class="highlight">Luciérnagas</span>, un movimiento revolucionario de personas extraordinarias 
+                Somos <span class="highlight">Luciérnagas</span>, un movimiento revolucionario de personas
+                extraordinarias
                 dedicadas a cambiar vidas. Cada mes, con solo <span class="highlight">$5 USD</span>, creamos magia.
-                Hasta <span class="highlight">diciembre 2026</span>, cada centavo se convierte en sonrisas, esperanzas y sueños cumplidos.
+                Hasta <span class="highlight">diciembre 2026</span>, cada centavo se convierte en sonrisas, esperanzas y
+                sueños cumplidos.
             </p>
             <p class="mission-text">
                 🌟 Niños sin recursos • 🦋 Personas con discapacidad • 💙 Familias necesitadas
@@ -637,15 +702,15 @@
 
             <div class="stats-container">
                 <div class="stat-card">
-                    <div class="stat-number" data-count="12">0</div>
+                    <div class="stat-number" data-count="14">0</div>
                     <div class="stat-label">Ángeles Activos</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number">$<span data-count="60">0</span></div>
+                    <div class="stat-number">$<span id="recaudado" data-count="65">0</span></div>
                     <div class="stat-label">Recaudado (Enero)</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number">$<span data-count="720">0</span></div>
+                    <div class="stat-number">$<span id="meta" data-count="840">0</span></div>
                     <div class="stat-label">Meta Diciembre</div>
                 </div>
                 <div class="stat-card">
@@ -663,12 +728,12 @@
                                 <stop offset="100%" style="stop-color:#00D9FF;stop-opacity:1" />
                             </linearGradient>
                         </defs>
-                        <circle class="progress-bg" cx="100" cy="100" r="85"/>
-                        <circle class="progress-bar-ring" cx="100" cy="100" r="85" 
-                                stroke-dasharray="534" stroke-dashoffset="534"/>
+                        <circle class="progress-bg" cx="100" cy="100" r="85" />
+                        <circle class="progress-bar-ring" cx="100" cy="100" r="85" stroke-dasharray="534"
+                            stroke-dashoffset="534" />
                     </svg>
                     <div class="progress-text">
-                        <div class="progress-percentage">8.3%</div>
+                        <div class="progress-percentage" id="progress-percentage">8.3%</div>
                         <div style="color: var(--text-dim); font-size: 0.9rem;">Completado</div>
                     </div>
                 </div>
@@ -681,19 +746,19 @@
                 <div class="person-card" onclick="celebrateDonation(this)">
                     <span class="role-badge">👑 Líder</span>
                     <div class="person-avatar">👸</div>
-                    <div class="person-name">Genesis Victoria Rebolledo Iza</div>
+                    <div class="person-name">Victoria</div>
                     <div class="donation-amount">$5 USD</div>
                 </div>
                 <div class="person-card" onclick="celebrateDonation(this)">
                     <span class="role-badge">👑 Líder</span>
                     <div class="person-avatar">💎</div>
-                    <div class="person-name">Camila Fernanda Albiño Trujillo</div>
+                    <div class="person-name">Fer</div>
                     <div class="donation-amount">$5 USD</div>
                 </div>
                 <div class="person-card" onclick="celebrateDonation(this)">
                     <span class="role-badge">👑 Líder</span>
                     <div class="person-avatar">⚡</div>
-                    <div class="person-name">Ángel Josué Lucio Fernández</div>
+                    <div class="person-name">Angel</div>
                     <div class="donation-amount">$5 USD</div>
                 </div>
             </div>
@@ -704,74 +769,84 @@
             <div class="person-grid">
                 <div class="person-card" onclick="celebrateDonation(this)">
                     <div class="person-avatar">🌟</div>
-                    <div class="person-name">Ronald Styck Torres Romero</div>
+                    <div class="person-name">Styck</div>
                     <div class="donation-amount">$5 USD</div>
                 </div>
                 <div class="person-card" onclick="celebrateDonation(this)">
                     <div class="person-avatar">🚀</div>
-                    <div class="person-name">Neil Jair Goyes Recalde</div>
+                    <div class="person-name">Jair</div>
                     <div class="donation-amount">$5 USD</div>
                 </div>
                 <div class="person-card" onclick="celebrateDonation(this)">
                     <div class="person-avatar">🎯</div>
-                    <div class="person-name">Kevin Santiago Romero Erazo</div>
+                    <div class="person-name">Santiago</div>
                     <div class="donation-amount">$5 USD</div>
                 </div>
                 <div class="person-card" onclick="celebrateDonation(this)">
                     <div class="person-avatar">🔥</div>
-                    <div class="person-name">Eliceo Javier Saldaña Faican</div>
+                    <div class="person-name">Javier</div>
                     <div class="donation-amount">$5 USD</div>
                 </div>
                 <div class="person-card" onclick="celebrateDonation(this)">
                     <div class="person-avatar">🌸</div>
-                    <div class="person-name">Nahomy Selena Moreta Arcos</div>
+                    <div class="person-name">Selena</div>
                     <div class="donation-amount">$5 USD</div>
                 </div>
                 <div class="person-card" onclick="celebrateDonation(this)">
                     <div class="person-avatar">💫</div>
-                    <div class="person-name">Vivian Daniela Oñate Albiño</div>
+                    <div class="person-name">Daniela</div>
                     <div class="donation-amount">$5 USD</div>
                 </div>
                 <div class="person-card" onclick="celebrateDonation(this)">
                     <div class="person-avatar">⚡</div>
-                    <div class="person-name">Wilson Eloy Valero Aguayo</div>
+                    <div class="person-name">Eloy</div>
                     <div class="donation-amount">$5 USD</div>
                 </div>
                 <div class="person-card" onclick="celebrateDonation(this)">
                     <div class="person-avatar">🌺</div>
-                    <div class="person-name">Ruth Elizabeth Recalde Barahona</div>
+                    <div class="person-name">Elizabeth</div>
                     <div class="donation-amount">$5 USD</div>
                 </div>
                 <div class="person-card" onclick="celebrateDonation(this)">
                     <div class="person-avatar">💖</div>
-                    <div class="person-name">Kenny Alvarado de Camila</div>
+                    <div class="person-name">Kenny</div>
                     <div class="donation-amount">$5 USD</div>
+                </div>
+                <div class="person-card" onclick="celebrateDonation(this)">
+                    <div class="person-avatar">🔥</div>
+                    <div class="person-name">Alex</div>
+                    <div class="donation-amount">$5 USD</div>
+                </div>
+                <div class="person-card" onclick="celebrateDonation(this)">
+                    <div class="person-avatar">🌸</div>
+                    <div class="person-name">Caro</div>
+                    <div class="donation-amount">$0 USD</div>
                 </div>
             </div>
         </section>
-
         <section class="join-section">
             <h2 class="join-title">🌟 ¡ÚNETE AL MOVIMIENTO! 🌟</h2>
             <p class="mission-text" style="font-size: 1.3rem; max-width: 800px; margin: 0 auto 30px;">
-                Con <strong style="color: var(--primary); font-size: 1.5rem;">$5 USD mensuales</strong>, 
+                Con <strong style="color: var(--primary); font-size: 1.5rem;">$5 USD mensuales</strong>,
                 puedes ser parte de esta revolución de amor y esperanza. Juntos somos imparables.
             </p>
-            
+
             <div class="contact-grid">
                 <div class="contact-card">
                     <div class="contact-icon">📱</div>
-                    <div class="contact-name">Genesis Victoria</div>
+                    <div class="contact-name">Contacto</div>
                     <div class="contact-number">+593 XXX-XXXX</div>
                 </div>
                 <div class="contact-card">
-                    <div class="contact-icon">💬</div>
-                    <div class="contact-name">Camila Fernanda</div>
-                    <div class="contact-number">+593 979457610</div>
+                    <div class="contact-icon">📱</div>
+                    <div class="contact-name">Personal</div>
+                    <div class="contact-number">+593 967392701</div>
                 </div>
                 <div class="contact-card">
                     <div class="contact-icon">✉️</div>
-                    <div class="contact-name">Ángel Josué</div>
-                    <div class="contact-number">+593 967392701</div>
+                    <div class="contact-name">Correo</div>
+                    <div class="contact-number">rositaromero
+                        2901@gmail.com</div>
                 </div>
             </div>
         </section>
@@ -779,7 +854,8 @@
         <footer>
             <div class="footer-wave"></div>
             <p style="font-size: 1.5rem; margin-bottom: 15px; font-weight: 600;">
-                Creado con <span style="color: var(--primary); animation: heartbeat 1.5s infinite;">❤️</span> para cambiar el mundo
+                Creado con <span style="color: var(--primary); animation: heartbeat 1.5s infinite;">❤️</span> para
+                cambiar el mundo
             </p>
             <p style="color: var(--text-dim); font-size: 1rem;">
                 Asociación Luciérnagas © 2026 | Todos los derechos al futuro brillante
@@ -863,15 +939,61 @@
             setTimeout(() => animateCounter(el), 500);
         });
 
-        // Progress Ring Animation
+        // Progress Ring Auto Update (Recaudado / Meta)
         const progressBar = document.querySelector('.progress-bar-ring');
-        const circumference = 2 * Math.PI * 85;
-        const progress = 8.3; // Percentage
-        const offset = circumference - (progress / 100) * circumference;
+        const progressText = document.getElementById('progress-percentage');
 
-        setTimeout(() => {
+        const RADIUS = 85;
+        const CIRCUMFERENCE = 2 * Math.PI * RADIUS;
+
+        // (Opcional pero recomendado) asegúrate que el dasharray coincida con la circunferencia real
+        progressBar.style.strokeDasharray = CIRCUMFERENCE;
+
+        function getNumberFromElement(el) {
+            if (!el) return 0;
+            // Toma el texto visible; si está vacío, usa data-count
+            const raw = (el.textContent || el.getAttribute('data-count') || "0").toString();
+            // Limpia $ , espacios, etc.
+            const cleaned = raw.replace(/[^0-9.-]/g, '');
+            const n = parseFloat(cleaned);
+            return Number.isFinite(n) ? n : 0;
+        }
+
+        function updateProgressRing(animated = true) {
+            const recaudadoEl = document.getElementById('recaudado');
+            const metaEl = document.getElementById('meta');
+
+            const recaudado = getNumberFromElement(recaudadoEl);
+            const meta = getNumberFromElement(metaEl);
+
+            const pct = meta > 0 ? Math.min((recaudado / meta) * 100, 100) : 0;
+            const pctFixed = pct.toFixed(1);
+
+            // Actualiza texto
+            if (progressText) progressText.textContent = `${pctFixed}%`;
+
+            // Actualiza anillo
+            const offset = CIRCUMFERENCE - (pct / 100) * CIRCUMFERENCE;
+
+            // Si no quieres animación en algunos casos, puedes apagarla
+            progressBar.style.transition = animated ? 'stroke-dashoffset 0.8s ease' : 'none';
             progressBar.style.strokeDashoffset = offset;
-        }, 1000);
+        }
+
+        // Inicial (cuando ya terminó el contador)
+        setTimeout(() => updateProgressRing(true), 1100);
+
+        // Detecta cambios en el texto (si tú editas el valor recaudado/meta o si lo cambias por JS)
+        function watchChanges(el) {
+            if (!el) return;
+            const obs = new MutationObserver(() => updateProgressRing(true));
+            obs.observe(el, { childList: true, characterData: true, subtree: true });
+        }
+
+        watchChanges(document.getElementById('recaudado'));
+        watchChanges(document.getElementById('meta'));
+
+
 
         // Theme Toggle
         function toggleTheme() {
@@ -884,7 +1006,7 @@
         function celebrateDonation(card) {
             const colors = ['#FFD700', '#FFA500', '#00D9FF', '#FF6B35'];
             const rect = card.getBoundingClientRect();
-            
+
             for (let i = 0; i < 30; i++) {
                 const confetti = document.createElement('div');
                 confetti.className = 'confetti';
@@ -892,15 +1014,15 @@
                 confetti.style.top = rect.top + rect.height / 2 + 'px';
                 confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
                 confetti.style.opacity = '1';
-                
+
                 const angle = (Math.random() * 360) * Math.PI / 180;
                 const velocity = Math.random() * 5 + 5;
-                
+
                 confetti.style.animation = `confettiFall ${Math.random() * 2 + 2}s ease-out forwards`;
                 confetti.style.transform = `translate(${Math.cos(angle) * velocity * 20}px, 0) rotate(0deg)`;
-                
+
                 document.body.appendChild(confetti);
-                
+
                 setTimeout(() => confetti.remove(), 4000);
             }
         }
@@ -922,4 +1044,5 @@
         });
     </script>
 </body>
+
 </html>
