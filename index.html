@@ -702,19 +702,19 @@
 
             <div class="stats-container">
                 <div class="stat-card">
-                    <div class="stat-number" data-count="14">0</div>
+                    <div class="stat-number" data-count="14">10/div>
                     <div class="stat-label">Ángeles Activos</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number">$<span id="recaudado" data-count="105">0</span></div>
-                    <div class="stat-label">Recaudado (Febrero)</div>
+                    <div class="stat-number">$<span id="recaudado" data-count="300">0</span></div>
+                    <div class="stat-label">Total Recaudado</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number">$<span id="meta" data-count="840">0</span></div>
+                    <div class="stat-number">$<span id="meta" data-count="500">0</span></div>
                     <div class="stat-label">Meta Diciembre</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number" data-count="10">0</div>
+                    <div class="stat-number" data-count="1">0</div>
                     <div class="stat-label">Meses Restantes</div>
                 </div>
             </div>
@@ -733,7 +733,7 @@
                             stroke-dashoffset="534" />
                     </svg>
                     <div class="progress-text">
-                        <div class="progress-percentage" id="progress-percentage">8.3%</div>
+                        <div class="progress-percentage" id="progress-percentage">33.3%</div>
                         <div style="color: var(--text-dim); font-size: 0.9rem;">Completado</div>
                     </div>
                 </div>
@@ -747,19 +747,19 @@
                     <span class="role-badge">👑 Líder</span>
                     <div class="person-avatar">👸</div>
                     <div class="person-name">Victoria</div>
-                    <div class="donation-amount">$5 USD</div>
+                    <div class="donation-amount">$0 USD</div>
                 </div>
                 <div class="person-card" onclick="celebrateDonation(this)">
                     <span class="role-badge">👑 Líder</span>
                     <div class="person-avatar">💎</div>
                     <div class="person-name">Fer</div>
-                    <div class="donation-amount">$10 USD</div>
+                    <div class="donation-amount">$40 USD</div>
                 </div>
                 <div class="person-card" onclick="celebrateDonation(this)">
                     <span class="role-badge">👑 Líder</span>
                     <div class="person-avatar">⚡</div>
                     <div class="person-name">Angel</div>
-                    <div class="donation-amount">$10 USD</div>
+                    <div class="donation-amount">$60 USD</div>
                 </div>
             </div>
         </section>
@@ -770,22 +770,22 @@
                 <div class="person-card" onclick="celebrateDonation(this)">
                     <div class="person-avatar">🌟</div>
                     <div class="person-name">Styck</div>
-                    <div class="donation-amount">$10 USD</div>
+                    <div class="donation-amount">$30 USD</div>
                 </div>
                 <div class="person-card" onclick="celebrateDonation(this)">
                     <div class="person-avatar">🚀</div>
                     <div class="person-name">Jair</div>
-                    <div class="donation-amount">$15 USD</div>
+                    <div class="donation-amount">$60 USD</div>
                 </div>
                 <div class="person-card" onclick="celebrateDonation(this)">
                     <div class="person-avatar">🎯</div>
                     <div class="person-name">Santiago</div>
-                    <div class="donation-amount">$5 USD</div>
+                    <div class="donation-amount">$0 USD</div>
                 </div>
                 <div class="person-card" onclick="celebrateDonation(this)">
                     <div class="person-avatar">🔥</div>
                     <div class="person-name">Javier</div>
-                    <div class="donation-amount">$5 USD</div>
+                    <div class="donation-amount">$15 USD</div>
                 </div>
                 <div class="person-card" onclick="celebrateDonation(this)">
                     <div class="person-avatar">🌸</div>
@@ -805,7 +805,7 @@
                 <div class="person-card" onclick="celebrateDonation(this)">
                     <div class="person-avatar">🌺</div>
                     <div class="person-name">Elizabeth</div>
-                    <div class="donation-amount">$10 USD</div>
+                    <div class="donation-amount">$60 USD</div>
                 </div>
                 <div class="person-card" onclick="celebrateDonation(this)">
                     <div class="person-avatar">💖</div>
@@ -820,7 +820,7 @@
                 <div class="person-card" onclick="celebrateDonation(this)">
                     <div class="person-avatar">🌸</div>
                     <div class="person-name">Caro</div>
-                    <div class="donation-amount">$5 USD </div>
+                    <div class="donation-amount">$5 USD</div>
                 </div>
             </div>
         </section>
@@ -829,6 +829,9 @@
             <p class="mission-text" style="font-size: 1.3rem; max-width: 800px; margin: 0 auto 30px;">
                 Con <strong style="color: var(--primary); font-size: 1.5rem;">$5 USD mensuales</strong>,
                 puedes ser parte de esta revolución de amor y esperanza. Juntos somos imparables.
+                Podemos colaborar con la precencia física para poder dar un mejor acompañamiento a los demás
+                angeles que necesitan de nuestro apoyo, en el caso que no puedas apoyar monetariamente, 
+                puedes apoyarnos con tu tiempo y dedicación.
             </p>
 
             <div class="contact-grid">
@@ -919,6 +922,24 @@
         }
         animateParticles();
 
+        // Cálculo automático del total recaudado en base a los valores de las tarjetas
+        function calculateTotalDonations() {
+            let total = 0;
+            document.querySelectorAll('.donation-amount').forEach(el => {
+                const cleaned = el.textContent.replace(/[^0-9.-]/g, '');
+                const val = parseFloat(cleaned) || 0;
+                total += val;
+            });
+            return total;
+        }
+
+        // Sincronizar automáticamente el data-count del total recaudado antes de animar
+        const totalCalculado = calculateTotalDonations();
+        const recaudadoElInit = document.getElementById('recaudado');
+        if (recaudadoElInit && totalCalculado > 0) {
+            recaudadoElInit.setAttribute('data-count', totalCalculado);
+        }
+
         // Counter Animation
         function animateCounter(element) {
             const target = parseInt(element.getAttribute('data-count'));
@@ -982,6 +1003,7 @@
 
         // Inicial (cuando ya terminó el contador)
         setTimeout(() => updateProgressRing(true), 1100);
+        setTimeout(() => updateProgressRing(true), 2600);
 
         // Detecta cambios en el texto (si tú editas el valor recaudado/meta o si lo cambias por JS)
         function watchChanges(el) {
